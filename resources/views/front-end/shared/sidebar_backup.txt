@@ -1,0 +1,73 @@
+<div class="widget widget_social">
+    <h3 class="widget-title">Stay Connected</h3><!-- /.widget-title -->
+    <div class="widget-details">
+      <ul>
+        <li><a class="rss" href="#"><i class="fa fa-rss"></i><span class="count">15k</span> Rss Feed Subscribers</a></li>
+        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span class="count">217K</span> Twitter Followers</a></li>
+        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span class="count">118k</span> Facebook Fans</a></li>
+        <li><a class="vimeo" href="#"><i class="fa fa-vimeo"></i><span class="count">90k</span> Google Plus Fans</a></li>
+      </ul>
+    </div><!-- /.widget-details -->
+  </div><!-- /.widget -->
+
+  <div class="widget widget_latest_post">
+    <h3 class="widget-title">Latest Post</h3><!-- /.widget-title -->
+    <div class="widget-details">
+      @foreach ($topvideos as $topvideo)
+        <article class="post type-post media">
+          <div class="entry-thumbnail media-left">
+            <img src="/category_image/{{ $topvideo->category->image }}?mw=1300&amp;mh=562" alt="Entry Thumbnail">
+          </div><!-- /.entry-thumbnail -->
+          <div class="entry-content media-body">
+        <h3 class="entry-title"><a href="blog-single.html">{{ $topvideo->title }}</a></h3><!-- /.entry-title -->
+        <div class="entry-meta">
+          <span><i class="fa fa-clock-o"></i> <time datetime="2017-01-20">{{ date('F d, Y', strtotime($topvideo->created_at))}}</time></span>
+        </div><!-- /.entry-meta -->
+      </div><!-- /.entry-content -->
+    </article><!-- /.post --> 
+      @endforeach
+     
+
+    </div><!-- /.widget-details -->
+  </div><!-- /.widget -->
+
+  {{-- <div class="widget widget_most_liked">
+    <h3 class="widget-title">Most Liked</h3><!-- /.widget-title -->
+    <div class="widget-details">
+      <article class="post type-post">
+        <div class="entry-thumbnail">
+          <img src="../../i.vimeocdn.com/video/60073041162e2.jpg?mw=960&amp;mh=540" alt="Item Thumbnail">
+          <a href="https://vimeo.com/189904045" class="iframe">
+            <span class="play-video"><i class="fa fa-play-circle-o"></i></span>
+          </a>
+        </div><!-- /.entry-thumbnail -->
+        <div class="entry-content">
+          <h2 class="entry-title"><a href="video-03.html">Top 10 Movies  of 2016 We Shouldn’t Miss Out</a></h2><!-- /.entry-title -->
+          <div class="entry-meta">
+            <span class="author"><a href="#">VideoBlogger</a></span><!-- /.author -->
+            <span><i class="fa fa-clock-o"></i> <time datetime="PT5M">5 months</time></span>
+            <span><a href="#"><i class="fa fa-comment-o"></i> <span class="count">351</span></a></span>
+            <span><i class="fa fa-eye"></i> <span class="count">17,989</span></span>
+          </div><!-- /.entry-meta -->
+        </div><!-- /.entry-content -->
+      </article><!-- /.type-post -->
+
+      <article class="post type-post">
+        <div class="entry-thumbnail">
+          <img src="../../i.vimeocdn.com/video/59022263762e2.jpg?mw=960&amp;mh=540" alt="Item Thumbnail">
+          <a href="https://vimeo.com/181612110" class="iframe">
+            <span class="play-video"><i class="fa fa-play-circle-o"></i></span>
+          </a>
+        </div><!-- /.entry-thumbnail -->
+        <div class="entry-content">
+          <h2 class="entry-title"><a href="video-03.html">Top 10 Movies  of 2016 We Shouldn’t Miss Out</a></h2><!-- /.entry-title -->
+          <div class="entry-meta">
+            <span class="author"><a href="#">VideoBlogger</a></span><!-- /.author -->
+            <span><i class="fa fa-clock-o"></i> <time datetime="PT5M">5 months</time></span>
+            <span><a href="#"><i class="fa fa-comment-o"></i> <span class="count">351</span></a></span>
+            <span><i class="fa fa-eye"></i> <span class="count">17,989</span></span>
+          </div><!-- /.entry-meta -->
+        </div><!-- /.entry-content -->
+      </article><!-- /.type-post -->
+    </div><!-- /.widget-details -->
+  </div><!-- /.widget --> --}}
